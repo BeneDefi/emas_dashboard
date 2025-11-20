@@ -1,11 +1,11 @@
 import React from "react";
 import { Route, Switch } from "wouter";
-import { Sidebar } from "./components/Sidebar";
-import { DashboardOverview } from "./screens/DashboardOverview";
-import { FrameScreen as BuyGoldScreen } from "./screens/BuyGold/FrameScreen";
-import { FrameScreen as LoansScreen } from "./screens/Loans/FrameScreen";
-import { FrameScreen as ProfileScreen } from "./screens/Profile/FrameScreen";
-import { FrameScreen as StakingScreen } from "./screens/Staking/FrameScreen";
+import { Sidebar } from "@/components/Sidebar";
+import { DashboardPage } from "@/features/dashboard";
+import { BuyGoldPage } from "@/features/buy-gold";
+import { LoansPage } from "@/features/loans";
+import { ProfilePage } from "@/features/profile";
+import { StakingPage } from "@/features/staking";
 
 export const App = (): JSX.Element => {
   return (
@@ -13,11 +13,11 @@ export const App = (): JSX.Element => {
       <Sidebar />
       <div className="flex-1 overflow-auto">
         <Switch>
-          <Route path="/" component={DashboardOverview} />
-          <Route path="/buy-gold" component={BuyGoldScreen} />
-          <Route path="/staking" component={StakingScreen} />
-          <Route path="/loans" component={LoansScreen} />
-          <Route path="/profile" component={ProfileScreen} />
+          <Route path="/" component={DashboardPage} />
+          <Route path="/buy-gold" component={BuyGoldPage} />
+          <Route path="/staking" component={StakingPage} />
+          <Route path="/loans" component={LoansPage} />
+          <Route path="/profile" component={ProfilePage} />
           <Route>404 - Not Found</Route>
         </Switch>
       </div>
