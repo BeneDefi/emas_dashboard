@@ -1,0 +1,1 @@
+export { PurchaseGoldSection } from "./PurchaseGoldSection";
